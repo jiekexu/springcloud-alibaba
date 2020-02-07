@@ -3,7 +3,7 @@
  */
 package com.alipay.springcloud.consumer.feign.sentinel.service;
 
-import com.alipay.springcloud.sentinel.service.impl.EchoServiceFallback;
+import com.alipay.springcloud.consumer.feign.sentinel.service.impl.EchoServiceFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
