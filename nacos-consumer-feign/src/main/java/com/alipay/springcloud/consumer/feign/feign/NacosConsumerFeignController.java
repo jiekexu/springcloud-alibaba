@@ -6,6 +6,7 @@ package com.alipay.springcloud.consumer.feign.feign;
 import com.alipay.springcloud.consumer.feign.service.EchoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -18,9 +19,9 @@ public class NacosConsumerFeignController {
     @Autowired
     private EchoService echoService;
 
-    @GetMapping(value = "/echo/hi")
-    public String echo() {
-        return echoService.echo("hi feigin");
+    @GetMapping(value = "/echo/hi/{message}")
+    public String echo(@PathVariable("message") String message) {
+        return echoService.echo(message);
     }
 
 }
